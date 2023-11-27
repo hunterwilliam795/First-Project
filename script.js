@@ -4,3 +4,5 @@ var searchOutput = search(input)
 
 displayResults(results);
 }
+
+function search() {}
