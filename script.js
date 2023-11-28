@@ -14,6 +14,9 @@ function movieSearch() {
         .then(function (data) {
             console.log(data);
         })
+        .then(function(){
+            input = document.getElementById('searchInput').value.trim()
+        })
         .catch(function (error) {
             console.log('Unable to connect to API', error)
         })
