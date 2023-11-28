@@ -1,4 +1,4 @@
-var input = document.getElementById('searchInput').value.trim()
+var input = document.getElementById('searchInput')
 var button = document.getElementById('searchButton')
 function searchButton() {
     movieSearch()
