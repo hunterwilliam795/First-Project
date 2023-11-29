@@ -1,0 +1,17 @@
+#searchButton {
+    background-color: rgb(56, 36, 235);
+    color: #fff;
+    border-radius: 15px;
+    padding: 7px;
+    font-size: 15px;
+    display: flex;  
+  flex-wrap: wrap;
+  margin-left: 8px;
+    /* Add any additional styling for the default state */
+}
+
+#searchButton:hover {
+    background-color: rgb(221, 74, 16); /* Change 'your-hover-color' to the desired hover background color */
+    color: #121d81; /* Change 'your-hover-text-color' to the desired hover text color */
+    /* Add any additional styling for the hover state */
+}
