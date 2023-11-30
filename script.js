@@ -26,6 +26,6 @@ function movieSearch() {
             console.log(data);
         })
         .catch(function (error) {
-            console.log('Unable to connect to API', error);
-        });
-}
+            console.log('Unable to connect to API', error)
+        })
+    }
