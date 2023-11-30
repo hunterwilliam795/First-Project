@@ -22,11 +22,25 @@ function movieSearch() {
         .then(function (response) {
             return response.json();
         })
-        .then(function (data) {
-            console.log(data);
+        .then(function(data){
+            console.log(data)
+            displaydata(data);
         })
         .catch(function (error) {
             console.log('Unable to connect to API', error);
         });
 }
 
+function displaydata(data){
+    displayArea = document.getElementById('displayArea')
+    displayArea.innerHTML = ''
+    titleElement = document.createElement('h2')
+    titleElement.textContent = data.Title
+    displayArea.appendChild(titleElement)
+    runtimeElement = document.createElement('h2')
+    runtimeElement.textContent = data.Runtime
+    displayArea.appendChild(runtimeElement)
+    releasedateElement = document.createElement('h2')
+    releasedateElement.textContent = data.Released
+    displayArea.appendChild(releasedateElement)
+}
