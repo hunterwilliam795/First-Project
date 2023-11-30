@@ -13,8 +13,8 @@
 #searchButton:hover {
     background-color: rgb(221, 74, 16); /* Change 'your-hover-color' to the desired hover background color */
     color: #121d81; /* Change 'your-hover-text-color' to the desired hover text color */
-    /* Add any additional styling for the ho
-<<<<<<< HEADz
+  
+}
 
 footer {
   /* Styles for the footer */
@@ -26,4 +26,15 @@ footer {
   text-align: center;
   padding: 10px;
   font-size: 12px;
+}
+
+
+#displayArea {
+  text-align: center;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  margin: 0;
 }
