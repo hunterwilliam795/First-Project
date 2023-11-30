@@ -17,6 +17,19 @@
 }
 
 
+footer {
+  /* Styles for the footer */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333; 
+  color: #fff; 
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+}
+
+
 #displayArea {
   text-align: center;
   display: flex;
@@ -26,3 +39,4 @@
   height: 80vh;
   margin: 0;
 }
+
