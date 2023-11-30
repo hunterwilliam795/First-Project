@@ -31,16 +31,58 @@ function movieSearch() {
         });
 }
 
-function displaydata(data){
-    displayArea = document.getElementById('displayArea')
-    displayArea.innerHTML = ''
-    titleElement = document.createElement('h2')
-    titleElement.textContent = data.Title
-    displayArea.appendChild(titleElement)
-    runtimeElement = document.createElement('h2')
-    runtimeElement.textContent = data.Runtime
-    displayArea.appendChild(runtimeElement)
-    releasedateElement = document.createElement('h2')
-    releasedateElement.textContent = data.Released
-    displayArea.appendChild(releasedateElement)
+
+function displaydata(data) {
+    displayArea = document.getElementById('displayArea');
+    displayArea.innerHTML = '';
+
+    // Container for Poster and Text
+    container = document.createElement('div');
+    container.style.display = 'flex';
+    container.style.alignItems = 'flex-start';
+
+    // Poster Element
+    posterElement = document.createElement('img');
+    posterElement.src = data.Poster;  
+    posterElement.alt = 'Movie Poster'; 
+    posterElement.style.marginRight = '10px'; 
+    posterElement.style.width = "150px";
+    container.appendChild(posterElement);
+
+    // Text Elements
+    textContainer = document.createElement('div');
+    textContainer.style.maxWidth = '600px';
+
+    // Title Element
+    titleElement = document.createElement('h2');
+    titleElement.textContent = 'Title: ' + data.Title;
+    textContainer.appendChild(titleElement);
+
+    // Runtime Element
+    runtimeElement = document.createElement('h2');
+    runtimeElement.textContent = 'Runtime: ' + data.Runtime;
+    textContainer.appendChild(runtimeElement);
+
+    // Release Date Element
+    releasedateElement = document.createElement('h2');
+    releasedateElement.textContent = 'Release Date: ' + data.Released;
+    textContainer.appendChild(releasedateElement);
+
+    // Actors
+    actorsElement = document.createElement('h2');
+    actorsElement.textContent = 'Actors: ' + data.Actors;
+    textContainer.appendChild(actorsElement);
+    container.appendChild(textContainer);
+    displayArea.appendChild(container);
+
+    // Plot
+    plotElement = document.createElement('p');
+    plotElement.textContent = 'Plot: ' + data.Plot;
+    textContainer.appendChild(plotElement);
+
+    // MetaScore
+    metaElement = document.createElement('h2');
+    metaElement.textContent = 'Health Meter: ' + data.Metascore;
+    textContainer.appendChild(metaElement);
+    
 }
