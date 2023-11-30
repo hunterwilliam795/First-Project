@@ -32,6 +32,58 @@ function movieSearch() {
 }
 
 
+function callAnotherApi(imdbID) {
+    // Construct the URL for another API using the IMDb ID
+    var anotherApiLink = "https://api.watchmode.com/v1/title/" + imdbID + "/details/?apiKey=gbtBZz63F1Z3XpKrBv42YSF7ka3yzuCSldKKJ1ZX"
+
+    // Fetch data from the other API
+    fetch(anotherApiLink)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function(data){
+            console.log(data.trailer);
+            // Process data from the other API as needed
+        })
+        .catch(function (error) {
+            console.log('Unable to connect to another API', error);
+        });
+}
+
+
+let player;
+
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '315',
+      width: '560',
+      videoId: data.trailer, // Replace with your video ID or dynamically set it based on your API response
+      playerVars: {
+        'autoplay': 1,
+        'autohide': 1,
+        'wmode': 'transparent',
+        'controls': 1,
+        'enablejsapi': 1,
+        'fs': 1,
+        'playsinline': 0,
+        'rel': 0,
+        'showinfo': 0,
+        'modestbranding': 1,
+      },
+      events: {
+        'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
+  }
+
+  function onPlayerReady(event) {
+    // You can do something when the player is ready
+  }
+
+  function onPlayerStateChange(event) {
+    // You can do something when the player state changes
+  }
 function displaydata(data) {
     displayArea = document.getElementById('displayArea');
     displayArea.innerHTML = '';
@@ -84,5 +136,22 @@ function displaydata(data) {
     metaElement = document.createElement('h2');
     metaElement.textContent = 'Health Meter: ' + data.Metascore;
     textContainer.appendChild(metaElement);
-    
+
+    callAnotherApi(data.imdbID);
+     // Trailer
+     if (data.trailer) {
+        var trailerContainer = document.createElement('div');
+        trailerContainer.style.marginTop = '20px';
+
+        var trailerElement = document.createElement('iframe');
+        trailerElement.src = data.trailer;
+        trailerElement.width = '560';
+        trailerElement.height = '315';
+        trailerElement.frameBorder = '0';
+        trailerElement.allowFullscreen = true;
+
+        trailerContainer.appendChild(trailerElement);
+        textContainer.appendChild(trailerContainer);
+    }
+
 }
