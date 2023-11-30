@@ -16,6 +16,7 @@
     /* Add any additional styling for the hover state */
 }
 
+
 footer {
   /* Styles for the footer */
   position: fixed;
@@ -27,3 +28,15 @@ footer {
   padding: 10px;
   font-size: 12px;
 }
+
+
+#displayArea {
+  text-align: center;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  margin: 0;
+}
+
