@@ -1,24 +1,46 @@
-var input = document.getElementById('searchInput').value.trim()
+var input = document.getElementById('searchInput')
 var button = document.getElementById('searchButton')
 function searchButton() {
     movieSearch()
 }
 
 function movieSearch() {
-    var Apilink = "http://www.omdbapi.com/?t=" + input + "&apikey=8828c04b"
-    fetch(Apilink)
+    // Get the input value
+    var input = document.getElementById('searchInput').value.trim();
+    
+    // Check if the input is empty
+    if (input === '') {
+        console.log('Please enter a valid movie title');
+        return;
+    }
+
+    // Construct the API link with the input value
+    var ApiLink = "http://www.omdbapi.com/?t=" + input + "&apikey=8828c04b";
+
+    // Fetch data from the API
+    fetch(ApiLink)
         .then(function (response) {
-            return response.json()            
-        }
-        )
-        .then(function (data) {
-            console.log(data);
+            return response.json();
         })
-        .then(function(){
-            input = document.getElementById('searchInput').value.trim()
+        .then(function(data){
+            console.log(data)
+            displaydata(data);
         })
         .catch(function (error) {
-            console.log('Unable to connect to API', error)
-        })
-    }
-    
+            console.log('Unable to connect to API', error);
+        });
+}
+
+function displaydata(data){
+    displayArea = document.getElementById('displayArea')
+    displayArea.innerHTML = ''
+    titleElement = document.createElement('h2')
+    titleElement.textContent = data.Title
+    displayArea.appendChild(titleElement)
+    runtimeElement = document.createElement('h2')
+    runtimeElement.textContent = data.Runtime
+    displayArea.appendChild(runtimeElement)
+    releasedateElement = document.createElement('h2')
+    releasedateElement.textContent = data.Released
+    displayArea.appendChild(releasedateElement)
+}
