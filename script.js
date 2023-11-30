@@ -54,7 +54,7 @@ function displaydata(data) {
     textContainer.style.maxWidth = '600px';
 
     // Title Element
-    titleElement = document.createElement('h2');
+    titleElement = document.createElement('h3');
     titleElement.textContent = 'Title: ' + data.Title;
     textContainer.appendChild(titleElement);
 
