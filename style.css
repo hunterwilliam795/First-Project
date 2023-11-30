@@ -1,64 +1,54 @@
 #searchButton {
-    background-color: rgb(56, 36, 235);
-    color: #fff;
-    border-radius: 15px;
-    padding: 7px;
-    font-size: 15px;
-    display: flex;  
-  flex-wrap: wrap;
-  margin-left: 8px;
-    /* Add any additional styling for the default state */
-}
-
-#searchButton:hover {
-    background-color: rgb(233, 56, 43); /* Change 'your-hover-color' to the desired hover background color */
-    color: #064d0f; /* Change 'your-hover-text-color' to the desired hover text color */
-  
-}
-
-footer {
-  /* Styles for the footer */
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #333; 
-  color: #fff; 
-  text-align: center;
-  padding: 10px;
-  font-size: 12px;
-}
-
-
-#displayArea {
-  text-align: center;
+  background-color: rgb(56, 36, 235);
+  color: #fff;
+  border-radius: 15px;
+  padding: 7px;
+  font-size: 15px;
   display: flex;
-  flex-direction: column; 
-  align-items: center;
-  justify-content: center;
-  height: 80vh;
-  margin: 0;
+flex-wrap: wrap;
+margin-left: 8px;
+  /* Add any additional styling for the default state */
 }
-
+#searchButton:hover {
+  background-color: rgb(233, 56, 43); /* Change 'your-hover-color' to the desired hover background color */
+  color: #064D0F; /* Change 'your-hover-text-color' to the desired hover text color */
+}
+footer {
+/* Styles for the footer */
+position: fixed;
+bottom: 0;
+width: 100%;
+background-color: #333;
+color: #fff;
+text-align: center;
+padding: 10px;
+font-size: 12px;
+}
+#displayArea {
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 80vh;
+margin: 0;
+}
 h2 {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  padding: 5px;
-  text-align: left;
-  margin-left: 30px;
-
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+padding: 5px;
+text-align: left;
+margin-left: 30px;
 }
-
 p {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  padding: 5px;
-  text-align: left;
-  margin-left: 30px;
-
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+padding: 5px;
+text-align: left;
+margin-left: 30px;
 }
-
 h3 {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 25px;
-  padding: 15px;
-  margin-top: -80px;
-  text-decoration-line: underline;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 25px;
+padding: 15px;
+margin-top: -80px;
+text-decoration-line: underline;
 }
