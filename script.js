@@ -12,7 +12,7 @@ function movieSearch() {
     return;
   }
   // Construct the API link with the input value
-  var ApiLink = "http://www.omdbapi.com/?t=" + input + "&apikey=8828c04b";
+  var ApiLink = "https://www.omdbapi.com/?t=" + input + "&apikey=8828c04b";
   // Fetch data from the API
   fetch(ApiLink)
     .then(function (response) {
