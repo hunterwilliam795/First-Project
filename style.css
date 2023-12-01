@@ -13,6 +13,7 @@ margin-left: 8px;
   background-color: rgb(233, 56, 43); /* Change 'your-hover-color' to the desired hover background color */
   color: #064D0F; /* Change 'your-hover-text-color' to the desired hover text color */
 }
+
 footer {
 /* Styles for the footer */
 position: fixed;
@@ -51,4 +52,10 @@ font-size: 25px;
 padding: 15px;
 margin-top: -80px;
 text-decoration-line: underline;
+}
+
+iframe {
+  display: flex;
+  margin-top: -100px;
+  float: right;
 }
