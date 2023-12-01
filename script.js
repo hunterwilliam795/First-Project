@@ -40,7 +40,8 @@ function callAnotherApi(imdbID) {
             return response.json();
         })
         .then(function(data){
-            console.log(data.trailer);
+            console.log(data.trailer)
+            getlink(data);
             // Process data from the other API as needed
         })
         .catch(function (error) {
@@ -48,14 +49,23 @@ function callAnotherApi(imdbID) {
         });
 }
 
+function getlink(data){
+    var youtubeLink = data.trailer
+    console.log(youtubeLink)
+    onYouTubeIframeAPIReady(youtubeLink)
+}   
+
+var tag = document.createElement('script')
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag); 
 
 let player;
-
-  function onYouTubeIframeAPIReady() {
+function onYouTubeIframeAPIReady(youtubeLink) {
     player = new YT.Player('player', {
       height: '315',
       width: '560',
-      videoId: data.trailer, // Replace with your video ID or dynamically set it based on your API response
+      videoId: youtubeLink, // Replace with your video ID or dynamically set it based on your API response
       playerVars: {
         'autoplay': 1,
         'autohide': 1,
