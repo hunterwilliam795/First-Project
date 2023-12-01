@@ -26,12 +26,18 @@ padding: 10px;
 font-size: 12px;
 }
 #displayArea {
+
 display: flex;
 align-items: left;
 justify-content: left;
 margin: 60px;
 margin-left: 90px;
 width: 700px;
+color: black;
+
+}
+body {
+ background-color: #e93f3f; 
 }
 
 h2 {
@@ -64,4 +70,5 @@ text-decoration-line: underline;
   justify-content: center;
   align-items: center;
   margin-left: 250px;
+  
 }
