@@ -1,17 +1,17 @@
 # Created by: 
     William Hunter, Frandina Volcy, Manin Gauba, Christian Douglas
 
-# Movie Reviews:
+# Movie Finder:
 
-    Allows users to search for movies and gives them reviews and ratings 
+    Allows users to search for movies and gives them the poster, release date, plot, actors, runtime, and metacritic score as well as a trailer from youtube.
 
-    Website: <add link when deployed>
+    Website: https://hunterwilliam795.github.io/First-Project/
 
 # API's Used:
 
     1. http://www.omdbapi.com/?t=
 
-    2. Not Yet Known
+    2. https://api.watchmode.com/ 
 
 # CSS Framework Used:
 
