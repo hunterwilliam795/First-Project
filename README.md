@@ -5,7 +5,7 @@
 
     Allows users to search for movies and gives them the poster, release date, plot, actors, runtime, and metacritic score as well as a trailer from youtube.
 
-    Website: https://hunterwilliam795.github.io/First-Project/
+    Website: https://hunterwilliam795.github.io/First-Project/ 
 
 # API's Used:
 
