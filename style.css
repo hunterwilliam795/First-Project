@@ -25,17 +25,7 @@ text-align: center;
 padding: 10px;
 font-size: 12px;
 }
-#displayArea {
 
-display: flex;
-align-items: left;
-justify-content: left;
-margin: 60px;
-margin-left: 90px;
-width: 700px;
-color: black;
-
-}
 body {
  background-color: #e93f3f; 
 }
@@ -66,9 +56,4 @@ text-decoration-line: underline;
   margin-top: -360px;
 }
 
-#info {
-  justify-content: center;
-  align-items: center;
-  margin-left: 250px;
-  columns: 2;
-}
+
