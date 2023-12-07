@@ -25,23 +25,34 @@ function movieSearch() {
 
       if (data.Search) {
         displayArea.innerHTML = ''
+
+
         for (var i = 0; i < data.Search.length; i++) {
+          movieContainerElement = document.createElement('container');
+          // Poster
           posterElement = document.createElement('img');
           posterElement.src = data.Search[i].Poster;
           posterElement.alt = 'Movie Poster';
           posterElement.style.marginRight = '10px';
           posterElement.style.width = "150px";
+          // Title
           titleElement = document.createElement('h3');
           titleElement.textContent = 'Title: ' + data.Search[i].Title
+          // Year
           yearElement = document.createElement('p');
-          yearElement.textContent = 'Title: ' + data.Search[i].Year
+          yearElement.textContent = 'Year: ' + data.Search[i].Year
+          // Button
           button = document.createElement('button')
-          button.setAttribute('data-id',data.Search[i].imdbID)
-          breakElement = document.createElement('br')
-          breakElement.setAttribute('break','5')
-          // button.textContent('More Info')
-          displayArea.append(posterElement,titleElement,yearElement,button,breakElement)
-          
+          button.setAttribute('data-id', data.Search[i].imdbID)
+          button.textContent = 'More Info';
+          button.style.backgroundColor = 'blue';
+          button.style.color = '#fff';
+          button.style.padding = '7px';
+          button.style.fontSize = '15px';
+          button.style.display = 'flex';
+          button.style.marginLeft = '7px';
+          movieContainerElement.append(posterElement, titleElement, yearElement, button);
+          displayArea.append(movieContainerElement);
         }
         // var imdbIDs = data.Search.map(function (movie) {
         //   return movie.imdbID;
@@ -122,12 +133,12 @@ function getlink(data) {
 }
 
 function extractVideoId(url) {
-  // Regular expression to match YouTube video ID in various URL formats
+
   var regExp = '/^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/';
   var match = url.match(regExp);
 
 
-  // If there's a match, return the video ID, otherwise return null
+
   return match ? match[1] : null;
 
 }

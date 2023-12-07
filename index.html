@@ -7,13 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Movie Finder</title>
   <link rel="stylesheet" href="./style.css">
-  
+
   <link href="./dist/output.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css" />
 
 
-  
+
 </head>
 
 
@@ -175,14 +175,41 @@
     </button>
   </div>
 
-  
-  
+
+
 
   <div id="info">
-    <div class="columns-2" id="displayArea"></div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4 place-content-center text-black"
+      id="displayArea"></div>
     <div id="player"></div>
   </div>
+  
+  <!-- modal -->
+  <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+    
+    <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 
+    <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+      <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+        
+        <div
+          class="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
+          <div class="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
+            <div class="sm:flex sm:items-start">
+              <div class="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
+                <h3 class="text-base font-semibold leading-6 text-gray-900" id="modal-title"></h3>
+                <div class="mt-2">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <footer>
 
     <h4>We give you the Healthiest Tomatoes to throw if the movie sucks. <br> Tomatoes Sold Seperately</h4>
@@ -190,7 +217,8 @@
   </footer>
 
 </body>
-<script src="./script.js"></script>  
+
+<script src="./script.js"></script>
 <script src="https://cdn.tailwindcss.com/3.3.0"></script>
 <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
 <script>
@@ -207,5 +235,6 @@
       preflight: false,
     },
   };
-</script> 
+</script>
+
 </html>
