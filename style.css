@@ -70,5 +70,5 @@ text-decoration-line: underline;
   justify-content: center;
   align-items: center;
   margin-left: 250px;
-  
+  columns: 2;
 }
